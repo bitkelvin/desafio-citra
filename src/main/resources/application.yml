@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      database: dbdesafiocitra
+      host: localhost
+      port: 27017
+  application:
+    name: desafio-citra
+server:
+  port: 8888

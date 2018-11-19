@@ -25,14 +25,12 @@ public class ContaController {
 	private ContaService contaService;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	@ApiOperation("Retorna lista de todas as contas")
 	public List<ContaDTO> listarTodas(
 			@RequestParam(required = false, name = "nome", defaultValue = "") final String nome) {
 		return this.contaService.listarTodos(nome);
 	}
 	
 	@RequestMapping(value = "{id}", method = RequestMethod.GET)
-	@ApiOperation("Retorna uma conta buscada por ID")
 	public ResponseEntity<ContaDTO> listarPorId(@PathVariable(name = "id") String id) {
 		return ResponseEntity.ok(this.contaService.listarPorId(id));
 	}

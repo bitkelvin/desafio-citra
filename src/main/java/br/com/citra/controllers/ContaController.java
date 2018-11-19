@@ -25,7 +25,7 @@ public class ContaController {
 	private ContaService contaService;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	@ApiOperation("Retoan a lista de todas as contas")
+	@ApiOperation("Retorna lista de todas as contas")
 	public List<ContaDTO> listarTodas(
 			@RequestParam(required = false, name = "nome", defaultValue = "") final String nome) {
 		return this.contaService.listarTodos(nome);
